@@ -1,5 +1,7 @@
 package com.david.learn.algorithm.array;
 
+import java.util.concurrent.CompletableFuture;
+
 /**
  * 数组工具类
  */
@@ -24,5 +26,16 @@ public class ArrayTools {
         }
         System.out.println();
     }
+
+    public static void main(String[] args) throws Exception {
+        CompletableFuture<String> completableFuture
+                = CompletableFuture.supplyAsync(() -> "Supply Async...");
+
+        CompletableFuture<String> execution = completableFuture
+                .thenApply(s -> s + " Callback executed...");
+
+        System.out.println(execution.get());
+    }
+
 
 }
