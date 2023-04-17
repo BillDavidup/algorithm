@@ -1,7 +1,6 @@
 package com.david.learn.algorithm.selectsort;
 
 import com.david.learn.algorithm.array.ArrayTools;
-import com.david.learn.algorithm.insertsort.direct.DirectInsertSort;
 
 /**
  * 选择排序调用客户端
