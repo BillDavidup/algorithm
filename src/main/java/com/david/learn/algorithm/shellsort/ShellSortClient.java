@@ -15,6 +15,18 @@ public class ShellSortClient {
         ShellSort.shellSort(arr);
         ArrayTools.print(arr);
 
+        System.out.println("----------2.希尔排序------------");
+        int[] arr2 = ArrayTools.init();
+        ArrayTools.print(arr2);
+        ShellSortGo.shellSortGo(arr2);
+        ArrayTools.print(arr2);
+
+        System.out.println("----------3.插入排序------------");
+        int[] arr3 = ArrayTools.init();
+        ArrayTools.print(arr3);
+        ShellSortGo.insertSort(arr3);
+        ArrayTools.print(arr3);
+
     }
 
 }
