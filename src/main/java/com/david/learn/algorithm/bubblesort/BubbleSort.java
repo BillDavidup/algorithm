@@ -11,7 +11,7 @@ public class BubbleSort {
      * @param arr
      * @return
      */
-    public static int[] bubbleSort(int[] arr) {
+    public static void bubbleSort(int[] arr) {
         /**
          * 外层循环执行一次浮出一个排序好位置的数，就是最后位置的数为最大
          * i是已浮出数量
@@ -29,7 +29,6 @@ public class BubbleSort {
                 }
             }
         }
-        return arr;
     }
 
 }
