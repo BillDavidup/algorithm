@@ -18,13 +18,31 @@ public class ArrayTools {
     }
 
     /**
+     * 初始化一个用于堆排序的数组
+     *
+     * @return
+     */
+    public static int[] bigTopHeapArrInit() {
+        int[] arr = new int[9];
+        arr[1] = 53;
+        arr[2] = 17;
+        arr[3] = 78;
+        arr[4] = 9;
+        arr[5] = 45;
+        arr[6] = 65;
+        arr[7] = 87;
+        arr[8] = 32;
+        return arr;
+    }
+
+    /**
      * 打印数组元素
      *
      * @param arr
      */
     public static void print(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i]);
+            System.out.print(arr[i] + " ");
         }
         System.out.println();
     }
