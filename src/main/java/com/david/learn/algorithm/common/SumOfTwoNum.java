@@ -15,7 +15,7 @@ public class SumOfTwoNum {
      * @param args
      */
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(sumOfTwoNumForOrderArr(new int[]{1, 2, 3, 4, 5, 6}, 10)));
+        System.out.println(Arrays.toString(sumOfTwoNumForDoublePoint(new int[]{1, 2, 3, 4, 5, 6}, 10)));
     }
 
 
@@ -116,4 +116,28 @@ public class SumOfTwoNum {
         return -1;
     }
 
+    /**
+     * 双指针：效率更高
+     * @param arr
+     * @param target
+     * @return
+     */
+    public static int[] sumOfTwoNumForDoublePoint(int[] arr, int target) {
+        if (null == arr || arr.length == 0 || arr.length == 1) {
+            return new int[]{};
+        }
+        int low = 0;
+        int high = arr.length - 1;
+        while (low < high) {
+            int lowHithSum = arr[low] + arr[high];
+            if (lowHithSum == target) {
+                return new int[] {low, high};
+            } else if (lowHithSum > target) {
+                high --;
+            } else {
+                low ++;
+            }
+        }
+        return new int[]{};
+    }
 }
